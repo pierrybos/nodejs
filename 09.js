@@ -12,3 +12,21 @@ http.createServer(function (req, res) {
     res.end(data);
   });
 }).listen(8080);
+
+/*
+
+var fs = require('fs');
+
+fs.readFile('example.file', 'utf8', function (err, data) {
+    if (err) {
+      return console.log(err);
+    }
+    console.log(data);
+});
+
+
+var data = fs.readFileSync('example.file','utf8');
+console.log(data);
+
+
+*/
