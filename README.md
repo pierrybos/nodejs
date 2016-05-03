@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ![Targettrust](http://www.targettrust.com.br/img/header-logo_v2.png)
 
@@ -16,3 +17,7 @@
 9. Testes com mocha
 10. Deploy
 
+=======
+# targettrust-nodejs
+Exercicios do Curso de Nodejs - Targettrust
+>>>>>>> 6845b812123f0d6451e75448dfbe434e856f19e9
