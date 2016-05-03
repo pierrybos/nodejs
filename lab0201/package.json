@@ -1,0 +1,22 @@
+{
+  "name": "lab0201",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/pierrybos/lab0201aula.git"
+  },
+  "author": "bos, pierry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pierrybos/lab0201aula/issues"
+  },
+  "homepage": "https://github.com/pierrybos/lab0201aula#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
