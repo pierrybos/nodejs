@@ -21,6 +21,34 @@ app.get('/',function(req,res){
   	res.sendFile(__dirname + '/estados-cidades.json');
 });
 
+function encontrarBandeira(estado, res){
+
+    fs.readFile(__dirname + '/bandeiras.json', 'utf8', function(err, arquivo) {
+  
+      var bandeiras = JSON.parse(arquivo);
+
+      for(var idx in bandeiras){
+
+
+        if(bandeiras[idx].titulo.toLowerCase() == estado.nome.toLowerCase()){
+
+          estado['bandeira'] = bandeiras[idx];
+                      res.json(estado);
+                      break;
+
+        }
+
+
+      }
+
+   
+
+
+    });
+
+
+};
+
 app.get('/estado/:uf',function(req,res){
 	console.log('Request Type:', req.method);
 	var estado = {};
@@ -31,7 +59,7 @@ app.get('/estado/:uf',function(req,res){
         		console.log("Estado : " + estados['estados'][x].sigla.toLowerCase());
         		console.log("Estado UF : " + req.params.uf.toLowerCase());
         		estado = estados['estados'][x];
-        		res.json(estado);
+            encontrarBandeira(estado, res);
         		break;
         	}
         }
